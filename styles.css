@@ -1,0 +1,295 @@
+/* root is helpful for selecting global variables and setting a base specifity for elements. Root is considered a CSS pseudo class. */
+:root {
+    /* set variables */
+      --main-color: hotpink;
+      --secondary-color: aqua;
+      --pane-padding: 5px 42px;
+      --hero-spacing: 10px 10px 10px 10px;
+      /* set a global background color */
+      /* background-color: black */
+  }
+  
+  p {
+    color: var(--main-color);
+    border: 2px solid red;
+    width: fit-content
+  }
+  
+  p:hover{
+    color: var(--secondary-color);
+    padding: var(--hero-spacing);
+  }
+  
+  /* selectors */
+      /* selectors are used to select different parts of our code to apply CSS to it
+      basic selectors are class, id, element and attribute. We can get further into the weeds of selectors with pseudo selectors. */
+  
+      /* pseudo selectors */
+      /* https://www.w3schools.com/cssref/css_selectors.php */
+      /* CSS Pseudo-Selectors
+      Pseudo-selectors in CSS allow you to select and style elements based on their state, position, or occurrence in the document. Here are some commonly used pseudo-selectors:
+      
+      1. :hover
+      Description: Applies styles when the mouse pointer is over an element.
+      Example: a:hover { color: red; }
+      2. :active
+      Description: Applies styles when an element is being activated (e.g., clicked).
+      Example: button:active { background-color: blue; }
+      3. :focus
+      Description: Applies styles when an element has keyboard focus.
+      Example: input:focus { border-color: green; }
+      4. :visited
+      Description: Applies styles to visited links.
+      Example: a:visited { color: purple; }
+      5. :first-child
+      Description: Selects the first child element of its parent.
+      Example: ul li:first-child { font-weight: bold; }
+      6. :last-child
+      Description: Selects the last child element of its parent.
+      Example: ul li:last-child { color: red; }
+      7. :nth-child(n)
+      Description: Selects the nth child element of its parent.
+      Example: ul li:nth-child(3) { background-color: yellow; }
+      8. :nth-of-type(n)
+      Description: Selects the nth element of its type among its siblings.
+      Example: p:nth-of-type(odd) { color: blue; }
+      9. :not(selector)
+      Description: Selects elements that do not match the given selector.
+      Example: div:not(.special) { border: 1px solid black; }
+      10. :first-of-type
+      Description: Selects the first element of its type among its siblings.
+      Example: h2:first-of-type { font-size: 24px; }
+      11. :last-of-type
+      Description: Selects the last element of its type among its siblings.
+      Example: p:last-of-type { margin-bottom: 0; }
+      12. :empty
+      Description: Selects elements that have no children or text content.
+      Example: div:empty { display: none; } */
+  
+  
+  /* validations */
+  
+  /* Pseudo-selectors in CSS are primarily used for styling purposes rather than performing form validations. However, you can utilize pseudo-selectors in combination with CSS attribute selectors and the :valid and :invalid pseudo-classes to visually indicate the validity of form inputs. */
+  
+  /* Sizing Options in CSS
+  CSS provides various sizing options to control the dimensions of elements. Here are some commonly used sizing options along with their descriptions and examples:
+  
+  1. Pixels (px)
+  Description: Pixels are a fixed unit of measurement that represents the exact number of pixels on the screen.
+  Example: font-size: 16px; sets the font size to 16 pixels.
+  2. Em (em)
+  Description: The "em" unit is relative to the font size of the parent element. It allows for scalable sizing based on the parent's font size.
+  Example: font-size: 1.2em; sets the font size to 1.2 times the font size of the parent element.
+  3. Rem (rem)
+  Description: Similar to the "em" unit, "rem" is relative to the root element's font size (typically the <html> element). It provides a consistent sizing throughout the document.
+  Example: margin: 1.5rem; sets the margin to 1.5 times the font size of the root element.
+  4. Percent (%)
+  Description: Percentages are relative units that refer to a percentage of the parent element's size. They are commonly used for responsive layouts.
+  Example: width: 50%; sets the width of an element to 50% of its parent's width.
+  Using different sizing options allows you to create flexible and responsive designs. Pixels provide precise control, while em and rem offer relative sizing based on parent or root elements. Percentages are particularly useful for creating fluid layouts that adapt to different screen sizes. Consider the context and requirements of your design when choosing the appropriate sizing option in CSS. */
+  
+  /* Ways to Style Colors in CSS
+  There are several ways to style colors in CSS. Here are the different options along with their descriptions and examples:
+  
+  1. Named Colors
+  Description: CSS provides a set of predefined color names that you can use directly.
+  Example: color: red; sets the text color to red.
+  2. Hexadecimal Colors
+  Description: Hexadecimal colors are represented using a combination of six alphanumeric characters (0-9 and A-F) prefixed with the hash symbol (#).
+  Example: background-color: #00ff00; sets the background color to green.
+  3. RGB Colors
+  Description: RGB (Red, Green, Blue) colors define a color by specifying the intensity of each primary color component. Each component is represented by a value between 0 and 255.
+  Example: border-color: rgb(255, 0, 0); sets the border color to red.
+  4. RGBA Colors
+  Description: RGBA (Red, Green, Blue, Alpha) colors are similar to RGB colors but include an additional alpha channel to specify the opacity. The alpha value ranges from 0.0 (fully transparent) to 1.0 (fully opaque).
+  Example: background-color: rgba(0, 0, 255, 0.5); sets the background color to semi-transparent blue.
+  5. HSL Colors
+  Description: HSL (Hue, Saturation, Lightness) colors represent a color based on its hue, saturation, and lightness values. Hue is represented by an angle from 0 to 360 degrees, saturation and lightness are represented by percentages.
+  Example: color: hsl(120, 100%, 50%); sets the text color to pure green.
+  6. HSLA Colors
+  Description: HSLA (Hue, Saturation, Lightness, Alpha) colors are similar to HSL colors but also include an alpha channel to specify opacity.
+  Example: background-color: hsla(240, 100%, 50%, 0.7); sets the background color to semi-transparent blue. */
+  
+  /* inheritance */
+  /* initial
+  -add this to any css property and the value will be the formal css default, according to css standards and not browser specific.
+  inherit
+  -add this to any css property and it will inherit the value from the parent. This is default for some css properties, such as font size and not for others, such as border.
+  unset
+  -will set the value to initial or inherit based on the property default
+  revert
+  -this will set the value to the browser default */
+  /* example */
+  
+  /* p {
+      color: yellow
+  } */
+  
+  
+  
+  /* grid */
+  /* CSS Grid is a powerful layout system that allows you to create complex two-dimensional grid-based layouts in CSS. It provides a straightforward way to divide a webpage into rows and columns, and position elements within the grid.
+  
+  To create a CSS grid layout, you'll need to follow these steps:
+  
+  Define the Grid Container: Start by applying the grid layout to a parent element, which becomes the grid container. You can do this by setting its display property to grid.
+  
+  Create Grid Rows and Columns: Specify the number and size of rows and columns in the grid container using the grid-template-rows and grid-template-columns properties. You can use values like fixed lengths (pixels, percentages) or flexible units (fr) to define the sizes.
+  
+  Place Grid Items: Position the child elements (grid items) within the grid using the grid-row and grid-column properties. You can specify the starting and ending lines for each item to determine its placement.
+  
+  Adjust Grid Gaps: Add gaps (spacing) between grid cells using the grid-gap property. You can set separate values for row gaps and column gaps to control the spacing. */
+  /* flex */
+  /* CSS Flexbox (Flexible Box) is a layout model that allows you to create flexible and responsive layouts in CSS. It simplifies the process of arranging elements within a container and provides powerful tools for controlling their alignment, ordering, and sizing.
+  
+  To use CSS Flexbox, you'll need to follow these steps:
+  
+  Create a Flex Container: Start by applying the flex layout to a parent element, which becomes the flex container. You can do this by setting its display property to flex or inline-flex.
+  
+  Arrange Flex Items: Place child elements (flex items) within the flex container. By default, they will arrange in a single row as a flex row. You can change the direction by setting the flex-direction property to row, row-reverse, column, or column-reverse to create vertical layouts.
+  
+  Control Flex Item Sizing: Specify how flex items should grow and shrink using the flex-grow, flex-shrink, and flex-basis properties. These properties control the distribution of space within the flex container.
+  
+  Align Flex Items: Use the justify-content property to align items along the main axis (horizontal alignment) and the align-items property to align items along the cross axis (vertical alignment). You can also adjust the alignment for individual items using the align-self property. */
+  
+  /* media query */
+  /* -general idea of a media query is to set css properties based on screen size, the screen itself, orientation and more */
+  /* check if the screen is in landscape and a width of less than 30em */
+  
+  /* Small devices such as large phones (640px and up) */
+  /* @media only screen and (min-width: 40em) {...} */
+  
+  /* Medium devices such as tablets (768px and up) */
+  /* @media only screen and (min-width: 48em) {...} */
+  
+  /* Large devices such as laptops (1024px and up) */
+  /* @media only screen and (min-width: 64em) {...} */
+  
+  /* Largest devices such as desktops (1280px and up) */
+  /* @media only screen and (min-width: 80em) {...} */
+  /* @media (min-width: 30em) and (orientation: landscape) {
+    :root {
+      --main-color: hotpink;
+      --secondary-color: aqua;
+      --pane-padding: 5px 42px;
+      --hero-spacing: 10px 10px 10px 10px;
+    } 
+  } */
+  
+  /* @media (min-width: 1260px) and (min-height: 851px){
+      .footer p {
+        font-size: 10px;
+      }
+      .sidebar{
+        display: none;
+      }
+  } */
+  /* Small devices such as large phones (640px and up) */
+  @media only screen and (min-width: 40em){
+    body{
+      background-color: black;
+      font-size: 2rem
+    }
+  }
+  /* Medium devices such as tablets (768px and up) */
+  @media (min-width: 48em){
+    body{
+      background-color:yellow;
+      font-size: 3rem
+    }
+  }
+  /* Large devices such as laptops (1024px and up) */
+  @media only screen and (min-width: 64em){
+    body{
+      background-color:blue;
+      font-size: 5rem
+    }
+  
+    p{
+      display: none
+    }
+  }
+  /* Largest devices such as desktops (1280px and up) */
+  @media (min-width: 80em){
+    body{
+      background-color:pink;
+      font-size: 7rem
+    }
+    p{
+      display:block
+    }
+  }
+  
+  @media (min-width: 1300px){
+    body{
+      background-color:teal;
+      font-size: 9rem
+    }
+    p{
+      display: none
+    }
+  }
+  
+  /* we can also target the entire screen or print */
+  @media print, screen{
+    /* … */
+  }
+  
+  
+  /* light and dark mode */
+  body {
+      /* Default styles for light mode */
+      /* background-color: white; */
+      /* color: black; */
+  }
+  
+  @media (prefers-color-scheme: dark) {
+  /* Styles for dark mode */
+  :root{
+  background-color: #000000;
+  }
+    /* body {
+        background-color: #000000;
+        color: #ffffff;
+    } */
+  }
+  
+  
+  
+  
+  .shake {
+      -webkit-animation: swirl-out-bck 0.6s ease-in both;
+              animation: swirl-out-bck 0.6s ease-in both;
+  }
+  
+  
+  /**
+   * ----------------------------------------
+   * animation swirl-out-bck
+   * ----------------------------------------
+   */
+   @-webkit-keyframes swirl-out-bck {
+      0% {
+        -webkit-transform: rotate(0) scale(1);
+                transform: rotate(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: rotate(-540deg) scale(0);
+                transform: rotate(-540deg) scale(0);
+        opacity: 0;
+      }
+    }
+    @keyframes swirl-out-bck {
+      0% {
+        -webkit-transform: rotate(0) scale(1);
+                transform: rotate(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: rotate(-540deg) scale(0);
+                transform: rotate(-540deg) scale(0);
+        opacity: 0;
+      }
+    }
+    
